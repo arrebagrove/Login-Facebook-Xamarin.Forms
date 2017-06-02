@@ -4,8 +4,20 @@
              xmlns:local="clr-namespace:LoginFacebook"
              x:Class="LoginFacebook.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="CenterAndExpand">
+        <Button Text="Logar com Facebook"
+                BackgroundColor="Blue"
+                FontSize="Medium"
+                TextColor="White"
+                x:Name="LoginButton"
+                BorderRadius="30"/>
+
+        <Label x:Name="InfoLabel"
+               FontSize="Medium"
+               TextColor="Black"/>
+
+    </StackLayout>
 
 </ContentPage>
