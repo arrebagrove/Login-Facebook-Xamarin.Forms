@@ -10,7 +10,7 @@ namespace LoginFacebook
 {
     public class AzureService
     {
-        static readonly string Appurl = "https://demosociallogin.azurewebsite.net";
+        static readonly string Appurl = "http://demosociallogin.azurewebsites.net";
 
         public MobileServiceClient Client { get; set; } = null;
 
