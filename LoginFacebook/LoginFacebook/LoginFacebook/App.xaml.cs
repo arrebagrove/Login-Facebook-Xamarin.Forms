@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
 using Xamarin.Forms;
 
 namespace LoginFacebook
@@ -13,7 +9,7 @@ namespace LoginFacebook
         {
             InitializeComponent();
 
-            MainPage = new LoginFacebook.MainPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
