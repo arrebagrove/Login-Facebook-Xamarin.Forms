@@ -41,7 +41,9 @@
     <Compile Include="Services\AzureService.cs" />
     <Compile Include="Authentication\IAuthenticate.cs" />
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>

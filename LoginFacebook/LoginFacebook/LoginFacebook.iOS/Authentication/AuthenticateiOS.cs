@@ -1,9 +1,10 @@
 ﻿using System;
 using LoginFacebook.iOS;
+using LoginFacebook.Helpers;
 using Microsoft.WindowsAzure.MobileServices;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using LoginFacebook.Helpers;
+
 using Xamarin.Forms;
 
 [assembly: Xamarin.Forms.Dependency(typeof(AuthenticateiOS))]
@@ -12,7 +13,7 @@ namespace LoginFacebook.iOS
     public class AuthenticateiOS : IAuthenticate
     {
 
-        public async Task<MobileServiceUser> LoginAsync(MobileServiceClient client, MobileServiceAuthenticationProvider provider,
+        public async Task<MobileServiceUser>LoginAsync(MobileServiceClient client, MobileServiceAuthenticationProvider provider,
             IDictionary<string, string> parameters = null)
         {
             try

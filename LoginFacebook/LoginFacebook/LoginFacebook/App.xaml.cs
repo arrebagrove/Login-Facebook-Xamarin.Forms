@@ -1,5 +1,6 @@
 ﻿
 using Xamarin.Forms;
+using LoginFacebook.Views;
 
 namespace LoginFacebook
 {
@@ -9,7 +10,7 @@ namespace LoginFacebook
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()

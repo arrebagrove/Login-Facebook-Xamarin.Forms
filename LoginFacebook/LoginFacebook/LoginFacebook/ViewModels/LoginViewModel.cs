@@ -8,32 +8,35 @@ using Xamarin.Forms;
 
 namespace LoginFacebook.ViewModels
 {
-    public class LoginViewModel
+    public class LoginViewModel : BaseViewModel
     {
         AzureService azureService;
         INavigation navigation;
 
-        ICommand loginCommand;
+        public Command loginCommand { get; }
 
-        public ICommand LoginCommand =>
-            loginCommand ?? (loginCommand = new Command(async () => ExecuteLoginCommandAsync()));
+        public Command MainCommand { get; }
+        
 
         public LoginViewModel(INavigation nav)
         {
             azureService = DependencyService.Get<AzureService>();
             navigation = nav;
+            loginCommand = new Command(async () => await ExecuteLoginCommandAsync());
 
             //Title = "Social Login demo";
         }
 
+
+
         private async Task ExecuteLoginCommandAsync()
         {
-            if (IsBusy || !(await LoginAsync()))
+            if (!await LoginAsync())
                 return;
             else
             {
                 var mainPage = new MainPage();
-                await navigation.PushAsync(mainPage);
+                await PushAsync<MainViewModel>(mainPage);
 
                 RemovePageFromStack();
             }

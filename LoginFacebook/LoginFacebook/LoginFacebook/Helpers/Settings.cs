@@ -31,5 +31,6 @@ namespace LoginFacebook.Helpers
 
         public static bool IsLoggedIn => !string.IsNullOrWhiteSpace(UserId);
 
-    }
+
+  }
 }
